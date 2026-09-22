@@ -1,0 +1,51 @@
+appId: com.example.Milab2
+name: "02 Lost & Found, Item Detail, Report Lost Item"
+tags:
+  - smoke
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Hi, Faizallll"
+- tapOn:
+    id: "nav_lost_found"
+- assertVisible: "Lost & Found"
+- assertVisible: "Lost Items"
+- assertVisible: "Help others find their belongings"
+- assertVisible: ".*Laptop Charger.*"
+- assertVisible: ".*TWS.*"
+- assertVisible: ".*Claimed.*"
+- assertVisible: ".*Unclaimed.*"
+
+- tapOn: ".*Laptop Charger.*"
+- assertVisible: "Item Details"
+- assertVisible: ".*Item Name.*"
+- assertVisible: ".*Location.*"
+- assertVisible: ".*Notes.*"
+- assertVisible: ".*Posted.*"
+- assertVisible: "Contact"
+- assertVisible: "Claim"
+- back
+- assertVisible: "Lost Items"
+
+- tapOn:
+    id: "report_lost_item"
+- assertVisible: ".*Report Lost Item.*"
+- assertVisible: ".*Fill in the details below.*"
+- assertVisible: "Item Name"
+- assertVisible: "Location"
+- assertVisible: "Additional Notes"
+- assertVisible: "Add Photos"
+- tapOn:
+    id: "report_item_name"
+- inputText: "Kunci Motor"
+- tapOn:
+    id: "report_location"
+- inputText: "Lab A"
+- tapOn: "Submit Report"
+- assertVisible: ".*Item has been reported successfully.*"
+- assertVisible: "Lost Items"
+
+- tapOn: ".*Laptop Charger.*"
+- assertVisible: "Item Details"
+- tapOn: "Claim"
+- assertVisible: ".*Processing your claim.*"

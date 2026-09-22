@@ -1,0 +1,66 @@
+appId: com.example.Milab2
+name: "01 Home, Our Product, My Class, Download Task"
+tags:
+  - smoke
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Hi, Faizallll"
+- assertVisible: "Other Services"
+- assertVisible: "Discover more possibilities"
+- assertVisible: "Menu Utama"
+- assertVisible: "My Class"
+- assertVisible: "Download Task"
+- assertVisible: "Schedule"
+- assertVisible: "Bad Student"
+
+- tapOn:
+    id: "home_view_all"
+- assertVisible: "Our Product"
+- assertVisible: ".*SIMUTU Lab.*"
+- tapOn: ".*SIMUTU Lab.*"
+- assertVisible: ".*Featured Service.*"
+- assertVisible: ".*About This Service.*"
+- assertVisible: "24/7"
+- scroll
+- assertVisible: "Get Started"
+- back
+- assertVisible: "Our Product"
+- tapOn:
+    id: "our_product_info"
+- assertVisible: ".*About MiLab.*"
+- back
+- assertVisible: "Our Product"
+- back
+- assertVisible: "Hi, Faizallll"
+
+- tapOn: "My Class"
+- assertVisible: "My Classes"
+- assertVisible: ".*Pemrograman Mobile E.*"
+- tapOn: ".*Pemrograman Mobile E.*"
+- assertVisible: ".*Final Grade.*"
+- assertVisible: ".*Modul 1.*"
+- assertVisible: "Grade: A"
+- tapOn: "Check Presence"
+- assertVisible: ".*Presence 1.*"
+- back
+- back
+- back
+- assertVisible: "Hi, Faizallll"
+
+- tapOn: "Download Task"
+- assertVisible: "Download Task"
+- tapOn: ".*Pemrograman Mobile E.*"
+- assertVisible: ".*Course Materials.*"
+- assertVisible: "6 Modules Available"
+- assertVisible: ".*Module 1.*"
+- tapOn: ".*Module 1.*"
+- assertVisible: ".*Module 1 Files.*"
+- assertVisible: ".*Module Guide.*"
+- assertVisible: ".*Practice Files.*"
+- assertVisible: ".*Additional Resources.*"
+- tapOn: ".*Practice Files.*"
+- assertVisible: ".*Downloading Files for Module 1.*"
+- back
+- back
+- assertVisible: "Hi, Faizallll"

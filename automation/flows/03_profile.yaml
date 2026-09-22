@@ -1,0 +1,34 @@
+appId: com.example.Milab2
+name: "03 Profile"
+tags:
+  - smoke
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Hi, Faizallll"
+- tapOn:
+    id: "nav_profile"
+- assertVisible: "Profile"
+- assertVisible: ".*Main Info.*"
+- assertVisible: ".*Contact.*"
+- assertVisible: ".*Settings.*"
+- assertVisible: "Ahmad Faizal"
+- assertVisible: "210123456"
+- assertVisible: "Switch to Assistant Mode"
+- tapOn: "Switch to Assistant Mode"
+- assertVisible: ".*Switching to assistant mode.*"
+
+- tapOn: ".*Contact.*"
+- assertVisible: "Contact Information"
+- assertVisible: ".*Email.*"
+- assertVisible: ".*Phone.*"
+- assertVisible: ".*Facebook.*"
+- assertVisible: ".*WhatsApp.*"
+
+- tapOn: ".*Settings.*"
+- assertVisible: "Account Settings"
+- assertVisible: ".*Notifications.*"
+- assertVisible: ".*Privacy.*"
+- scroll
+- assertVisible: "Role Management"
+- assertVisible: "Account Actions"

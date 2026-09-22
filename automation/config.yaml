@@ -1,0 +1,4 @@
+appId: com.example.Milab2
+flows:
+  - "flows/**"
+testOutputDir: output
